@@ -37,9 +37,42 @@ h1 {
     padding: 5px;
 }
 
+.byline {
+    text-transform: uppercase;
+}
+
+span {
+    font-weight: bold;
+}
+
 figure img {
     width: 100%;
+    max-width: 1000px;
+}
+
+p {
+    font-family: 'Georgia', sans-serif;
+    font-weight: lighter;
     max-width: 900px;
+    width: 100%
+}
+
+.insurance {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    border-width: 1px;
+    border-color: black;
+    padding-left: 3px;
+}
+
+.statefilter {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    border-width: 1px;
+    border-color: black;
+    padding-left: 3px;
 }
 
 /*********************************************************************
