@@ -51,30 +51,76 @@
 
       <h2> Answer the two questions to find out the cost of birth in each state</h2>
     </div>
-    <div class="statefilter">
-      <select class="filter">
-        <option value="">Select your state</option>
-        <option value="low">Low</option>
-        <option value="moderate">Moderate</option>
-        <option value="high">High</option>
-      </select>
+
     </div>
-    <div class="insurance">
+    <div class="container">
       <form>
-        <select id="character"></select>
-        <br><br>
-        <input id="enter" type="submit">
-        <button type="button">Insured</button> <button type="button">Uninsured</button>
-
+        <select id="state">
+          <option value="">Select a state</option>
+        </select>
+        <!--<input id="enter" type="submit">
+  <button type="button">Insured</button> <button type="button">Uninsured</button>-->
       </form>
-    </div>
 
-    <!-- YOUR CONTENT GOES HERE -->
+
+      <div class="traits">
+
+      </div>
+
+      <script type="text/html" id="state_template">
+        <div id="vinsured">
+        <%= state.vaginal_insured %>
+    </div>
+    </script>
+
+      <script type="text/html" id="state_template">
+        <div id="vuninsured">
+          <%state.vaginal_uninsured%>
+        </div>
+      </script>
+
+      <script type="text/html" id="state_template">
+        <div id="cinsured">
+            <%state.c_insured%>
+          </div>
+        </script>
+
+      <script type="text/html" id="state_template">
+        <div id="cuninsured">
+              <%state.c_uninsured%>
+            </div>
+          </script>
+
+      <script type="text/html" id="select_template">
+        <option value="<%= row.state %>"><%= row.state %></option>
+            </script>
+
+      <form id="children_input">
+        <h3>How many children do you have?</h3>
+        <input type="number" class="kids" value="1" max="20" /></input>
+        <div class="total" id="results">
+          <span> </span>
+          <div id="orla"><span> </span>
+          </div>
+          <div id="orla1">
+            <span></span>
+          </div>
+          <div id="orla2">
+            <span> </span>
+          </div>
+        </div>
+      </form>
+    </div> <!-- YOUR CONTENT GOES HERE -->
 
     <!-- the jQuery library. You need this to be able to use jQuery ($) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Your javascript should be called here -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+
+    <script src="main.js"></script>
+
+    <script src="data.js"></script>
   </body>
 
 </html>

@@ -1,505 +1,353 @@
 let result;
 //take the var data and its
-let data_insured = [{
-		"State": "Alabama",
-		"Vaginal": "$4,129.44",
-		"C-section": "$5,189.53"
+let data = [{
+		"state": "Alabama",
+		"vaginal_insured": "$4,129.44",
+		"vaginal_uninsured": "$9,013.88",
+		"c_insured": "$5,189.53",
+		"c_uninsured": "$12,593.60"
   },
 	{
-		"State": "Alaska",
-		"Vaginal": "$9,094.51",
-		"C-section": "$13,564.19"
+		"state": "Alaska",
+		"vaginal_insured": "$9,094.51",
+		"vaginal_uninsured": "$19,775.79",
+		"c_insured": "$13,564.19",
+		"c_uninsured": "$28,491.95"
   },
 	{
-		"State": "Arizona",
-		"Vaginal": "$6,124.20",
-		"C-section": "$8,168.29"
+		"state": "Arizona",
+		"vaginal_insured": "$6,124.20",
+		"vaginal_uninsured": "$12,930.96",
+		"c_insured": "$8,699.51",
+		"c_uninsured": "$18,299.01"
   },
 	{
-		"State": "Arkansas",
-		"Vaginal": "$4,538.06",
-		"C-section": "$5,671.21"
+		"state": "Arkansas",
+		"vaginal_insured": "$4,538.06",
+		"vaginal_uninsured": "$10,062.24",
+		"c_insured": "$5,671.21",
+		"c_uninsured": "$13,610.95"
   },
 	{
-		"State": "California",
-		"Vaginal": "$6,080.29",
-		"C-section": "$8,490.65"
+		"state": "California",
+		"vaginal_insured": "$6,080.29",
+		"vaginal_uninsured": "$13,081.32",
+		"c_insured": "$8,490.65",
+		"c_uninsured": "$19,001.81"
   },
 	{
-		"State": "Colorado",
-		"Vaginal": "$5,901.53",
-		"C-section": "$7,216.57"
+		"state": "Colorado",
+		"vaginal_insured": "$5,901.53",
+		"vaginal_uninsured": "$12,549.70",
+		"c_insured": "$7,216.57",
+		"c_uninsured": "$16,574.70"
   },
 	{
-		"State": "Connecticut",
-		"Vaginal": "$6,677.45",
-		"C-section": "$9,222.86"
+		"state": "Connecticut",
+		"vaginal_insured": "$6,677.45",
+		"vaginal_uninsured": "$14,583.66",
+		"c_insured": "$9,222.86",
+		"c_uninsured": "$20,410.99"
   },
 	{
-		"State": "Delaware",
-		"Vaginal": "$4,954.35",
-		"C-section": "$6,710.30"
+		"state": "Delaware",
+		"vaginal_insured": "$4,954.35",
+		"vaginal_uninsured": "$10,933.21",
+		"c_insured": "$6,710.30",
+		"c_uninsured": "$15,820.97"
   },
 	{
-		"State": "Florida",
-		"Vaginal": "$6,532.05",
-		"C-section": "$8,349.61"
+		"state": "Florida",
+		"vaginal_insured": "$6,532.05",
+		"vaginal_uninsured": "$13,923.95",
+		"c_insured": "$8,349.61",
+		"c_uninsured": "$18,864.02"
   },
 	{
-		"State": "Georgia",
-		"Vaginal": "$5,754.51",
-		"C-section": "$7,246.88"
+		"state": "Georgia",
+		"vaginal_insured": "$5,754.51",
+		"vaginal_uninsured": "$12,447.83",
+		"c_insured": "$7,246.88",
+		"c_uninsured": "$16,602.23"
   },
 	{
-		"State": "Hawaii",
-		"Vaginal": "$4,710.02",
-		"C-section": "$6,087.25"
+		"state": "Hawaii",
+		"vaginal_insured": "$4,710.02",
+		"vaginal_uninsured": "$10,332.87",
+		"c_insured": "$6,087.25",
+		"c_uninsured": "$14,530.95"
   },
 	{
-		"State": "Idaho",
-		"Vaginal": "$4,703.89",
-		"C-section": "$5,987.01"
+		"state": "Idaho",
+		"vaginal_insured": "$4,703.89",
+		"vaginal_uninsured": "$10,476.10",
+		"c_insured": "$5,987.01",
+		"c_uninsured": "$14,147.39"
   },
 	{
-		"State": "Illinois",
-		"Vaginal": "$6,599.68",
-		"C-section": "$8,226.46"
+		"state": "Illinois",
+		"vaginal_insured": "$6,599.68",
+		"vaginal_uninsured": "$14,047.36",
+		"c_insured": "$8,226.46",
+		"c_uninsured": "$18,425.98"
   },
 	{
-		"State": "Indiana",
-		"Vaginal": "$5,489.73",
-		"C-section": "$7,136.59"
+		"state": "Indiana",
+		"vaginal_insured": "$5,489.73",
+		"vaginal_uninsured": "$11,837.14",
+		"c_insured": "$7,136.59",
+		"c_uninsured": "$16,465.34"
   },
 	{
-		"State": "Iowa",
-		"Vaginal": "$4,805.08",
-		"C-section": "$6,379.57"
+		"state": "Iowa",
+		"vaginal_insured": "$4,805.08",
+		"vaginal_uninsured": "$10,452.98",
+		"c_insured": "$6,379.57",
+		"c_uninsured": "$14,955.90"
   },
 	{
-		"State": "Kansas",
-		"Vaginal": "$4,650.24",
-		"C-section": "$5,754.53"
+		"state": "Kansas",
+		"vaginal_insured": "$4,650.24",
+		"vaginal_uninsured": "$10,216.65",
+		"c_insured": "$5,754.53",
+		"c_uninsured": "$13,887.42"
   },
 	{
-		"State": "Kentucky",
-		"Vaginal": "$4,838.93",
-		"C-section": "$6,436.20"
+		"state": "Kentucky",
+		"vaginal_insured": "$4,838.93",
+		"vaginal_uninsured": "$10,485.97",
+		"c_insured": "$6,436.20",
+		"c_uninsured": "$15,055.99"
   },
 	{
-		"State": "Louisiana",
-		"Vaginal": "$4,477.55",
-		"C-section": "$6,066.45"
+		"state": "Louisiana",
+		"vaginal_insured": "$4,477.55",
+		"vaginal_uninsured": "$9,887.10",
+		"c_insured": "$6,066.45",
+		"c_uninsured": "$14,405.24"
   },
 	{
-		"State": "Maine",
-		"Vaginal": "$4,805.50",
-		"C-section": "$6,167.99"
+		"state": "Maine",
+		"vaginal_insured": "$4,805.50",
+		"vaginal_uninsured": "$10,685.24",
+		"c_insured": "$6,167.99",
+		"c_uninsured": "$14,641.75"
   },
 	{
-		"State": "Maryland",
-		"Vaginal": "$5,311.88",
-		"C-section": "$7,404.19"
+		"state": "Maryland",
+		"vaginal_insured": "$5,311.88",
+		"vaginal_uninsured": "$11,820.32",
+		"c_insured": "$7,404.19",
+		"c_uninsured": "$16,973.33"
   },
 	{
-		"State": "Massachusetts",
-		"Vaginal": "$6,668.26",
-		"C-section": "$7,985.89"
+		"state": "Massachusetts",
+		"vaginal_insured": "$6,668.26",
+		"vaginal_uninsured": "$14,618.17",
+		"c_insured": "$7,985.89",
+		"c_uninsured": "$18,088.29"
   },
 	{
-		"State": "Michigan",
-		"Vaginal": "$4,979.80",
-		"C-section": "$6,236.57"
+		"state": "Michigan",
+		"vaginal_insured": "$4,979.80",
+		"vaginal_uninsured": "$10,957.85",
+		"c_insured": "$6,236.57",
+		"c_uninsured": "$14,651.73"
   },
 	{
-		"State": "Minnesota",
-		"Vaginal": "$5,019.87",
-		"C-section": "$6,285.74"
+		"state": "Minnesota",
+		"vaginal_insured": "$5,019.87",
+		"vaginal_uninsured": "$11,031.86",
+		"c_insured": "$6,285.74",
+		"c_uninsured": "$14,677.68"
   },
 	{
-		"State": "Mississippi",
-		"Vaginal": "$4,778.51",
-		"C-section": "$5,729.57"
+		"state": "Mississippi",
+		"vaginal_insured": "$4,778.51",
+		"vaginal_uninsured": "$10,430.48",
+		"c_insured": "$5,729.57",
+		"c_uninsured": "$13,820.24"
   },
 	{
-		"State": "Missouri",
-		"Vaginal": "$5,001.99",
-		"C-section": "$6,133.98"
+		"state": "Missouri",
+		"vaginal_insured": "$5,001.99",
+		"vaginal_uninsured": "$10,906.82",
+		"c_insured": "$6,133.98",
+		"c_uninsured": "$14,590.62"
   },
 	{
-		"State": "Montana",
-		"Vaginal": "$5,075.42",
-		"C-section": "$5,994.05"
+		"state": "Montana",
+		"vaginal_insured": "$5,075.42",
+		"vaginal_uninsured": "$11,176.59",
+		"c_insured": "$5,994.05",
+		"c_uninsured": "$14,367.51"
   },
 	{
-		"State": "Nebraska",
-		"Vaginal": "$4,387.69",
-		"C-section": "$5,612.38"
+		"state": "Nebraska",
+		"vaginal_insured": "$4,387.69",
+		"vaginal_uninsured": "$9,611.30",
+		"c_insured": "$5,612.38",
+		"c_uninsured": "$13,602.12"
   },
 	{
-		"State": "Nevada",
-		"Vaginal": "$6,187.58",
-		"C-section": "$7,413.72"
+		"state": "Nevada",
+		"vaginal_insured": "$6,187.58",
+		"vaginal_uninsured": "$13,135.05",
+		"c_insured": "$7,413.72",
+		"c_uninsured": "$16,970.82"
   },
 	{
-		"State": "New Hampshire",
-		"Vaginal": "$5,279.52",
-		"C-section": "$8,881.02"
+		"state": "New Hampshire",
+		"vaginal_insured": "$5,279.52",
+		"vaginal_uninsured": "$11,487.32",
+		"c_insured": "$8,881.02",
+		"c_uninsured": "$19,525.80"
   },
 	{
-		"State": "New Jersey",
-		"Vaginal": "$7,918.74",
-		"C-section": "$9,659.54"
+		"state": "New Jersey",
+		"vaginal_insured": "$7,918.74",
+		"vaginal_uninsured": "$16,674.62",
+		"c_insured": "$9,659.54",
+		"c_uninsured": "$21,297.28"
   },
 	{
-		"State": "New Mexico",
-		"Vaginal": "$5,214.65",
-		"C-section": "$6,612.93"
+		"state": "New Mexico",
+		"vaginal_insured": "$5,214.65",
+		"vaginal_uninsured": "$11,033.96",
+		"c_insured": "$6,612.93",
+		"c_uninsured": "$15,406.29"
   },
 	{
-		"State": "New York",
-		"Vaginal": "$7,069.35",
-		"C-section": "$9,319.14"
+		"state": "New York",
+		"vaginal_insured": "$7,069.35",
+		"vaginal_uninsured": "$15,518.68",
+		"c_insured": "$9,319.14",
+		"c_uninsured": "$20,706.77"
   },
 	{
-		"State": "North Carolina",
-		"Vaginal": "$5,440.82",
-		"C-section": "$7,346.00"
+		"state": "North Carolina",
+		"vaginal_insured": "$5,440.82",
+		"vaginal_uninsured": "$11,848.73",
+		"c_insured": "$7,346.00",
+		"c_uninsured": "$16,993.96"
   },
 	{
-		"State": "North Dakota",
-		"Vaginal": "$5,897.83",
-		"C-section": "$7,283.89"
+		"state": "North Dakota",
+		"vaginal_insured": "$5,897.83",
+		"vaginal_uninsured": "$13,191.93",
+		"c_insured": "$7,283.89",
+		"c_uninsured": "$16,711.12"
   },
 	{
-		"State": "Ohio",
-		"Vaginal": "$4,903.84",
-		"C-section": "$6,079.16"
+		"state": "Ohio",
+		"vaginal_insured": "$4,903.84",
+		"vaginal_uninsured": "$10,609.60",
+		"c_insured": "$6,079.16",
+		"c_uninsured": "$14,508.64"
   },
 	{
-		"State": "Oklahoma",
-		"Vaginal": "$5,229.35",
-		"C-section": "$6,090.54"
+		"state": "Oklahoma",
+		"vaginal_insured": "$5,229.35",
+		"vaginal_uninsured": "$11,287.31",
+		"c_insured": "$6,090.54",
+		"c_uninsured": "$14,518.31"
   },
 	{
-		"State": "Oregon",
-		"Vaginal": "$5,506.05",
-		"C-section": "$6,422.55"
+		"state": "Oregon",
+		"vaginal_insured": "$5,506.05",
+		"vaginal_uninsured": "$12,231.67",
+		"c_insured": "$6,422.55",
+		"c_uninsured": "$15,231.75"
   },
 	{
-		"State": "Pennsylvania",
-		"Vaginal": "$5,501.76",
-		"C-section": "$8,166.53"
+		"state": "Pennsylvania",
+		"vaginal_insured": "$5,501.76",
+		"vaginal_uninsured": "$12,037.00",
+		"c_insured": "$8,166.53",
+		"c_uninsured": "$18,184.22"
   },
 	{
-		"State": "Rhode Island",
-		"Vaginal": "$4,160.16",
-		"C-section": "$5,668.76"
+		"state": "Rhode Island",
+		"vaginal_insured": "$4,160.16",
+		"vaginal_uninsured": "$9,147.54",
+		"c_insured": "$5,668.76",
+		"c_uninsured": "$13,761.92"
   },
 	{
-		"State": "South Carolina",
-		"Vaginal": "$5,236.12",
-		"C-section": "$7,100.54"
+		"state": "South Carolina",
+		"vaginal_insured": "$5,236.12",
+		"vaginal_uninsured": "$11,377.81",
+		"c_insured": "$7,100.54",
+		"c_uninsured": "$16,439.41"
   },
 	{
-		"State": "South Dakota",
-		"Vaginal": "$5,054.31",
-		"C-section": "$6,651.26"
+		"state": "South Dakota",
+		"vaginal_insured": "$5,054.31",
+		"vaginal_uninsured": "$11,175.50",
+		"c_insured": "$6,651.26",
+		"c_uninsured": "$15,534.41"
   },
 	{
-		"State": "Tennessee",
-		"Vaginal": "$5,906.25",
-		"C-section": "$7,599.19"
+		"state": "Tennessee",
+		"vaginal_insured": "$5,906.25",
+		"vaginal_uninsured": "$12,602.76",
+		"c_insured": "$7,599.19",
+		"c_uninsured": "$17,198.69"
   },
 	{
-		"State": "Texas",
-		"Vaginal": "$6,226.39",
-		"C-section": "$8,111.74"
+		"state": "Texas",
+		"vaginal_insured": "$6,226.39",
+		"vaginal_uninsured": "$13,149.87",
+		"c_insured": "$8,111.74",
+		"c_uninsured": "$18,461.72"
   },
 	{
-		"State": "Utah",
-		"Vaginal": "$4,464.57",
-		"C-section": "$5,433.21"
+		"state": "Utah",
+		"vaginal_insured": "$4,464.57",
+		"vaginal_uninsured": "$9,919.41",
+		"c_insured": "$5,433.21",
+		"c_uninsured": "$13,225.10"
   },
 	{
-		"State": "Vermont",
-		"Vaginal": "$5,572.32",
-		"C-section": "$6,376.08"
+		"state": "Vermont",
+		"vaginal_insured": "$5,572.32",
+		"vaginal_uninsured": "$12,074.59",
+		"c_insured": "$6,376.08",
+		"c_uninsured": "$15,103.24"
   },
 	{
-		"State": "Virginia",
-		"Vaginal": "$5,571.81",
-		"C-section": "$7,655.13"
+		"state": "Virginia",
+		"vaginal_insured": "$5,571.81",
+		"vaginal_uninsured": "$12,065.79",
+		"c_insured": "$7,655.13",
+		"c_uninsured": "$17,452.53"
   },
 	{
-		"State": "Washington",
-		"Vaginal": "$5,360.48",
-		"C-section": "$6,699.42"
+		"state": "Washington",
+		"vaginal_insured": "$5,360.48",
+		"vaginal_uninsured": "$11,769.31",
+		"c_insured": "$6,699.42",
+		"c_uninsured": "$15,670.46"
   },
 	{
-		"State": "West Virginia",
-		"Vaginal": "$4,584.32",
-		"C-section": "$5,853.87"
+		"state": "West Virginia",
+		"vaginal_insured": "$4,584.32",
+		"vaginal_uninsured": "$10,301.50",
+		"c_insured": "$5,853.87",
+		"c_uninsured": "$13,893.06"
   },
 	{
-		"State": "Wisconsin",
-		"Vaginal": "$7,520.06",
-		"C-section": "$9,945.70"
+		"state": "Wisconsin",
+		"vaginal_insured": "$7,520.06",
+		"vaginal_uninsured": "$15,798.92",
+		"c_insured": "$9,945.70",
+		"c_uninsured": "$21,703.62"
   },
 	{
-		"State": "Wyoming",
-		"Vaginal": "$6,099.28",
-		"C-section": "$7,393.27"
-}
-];
-
-let data_uninsured = [{
-		"State": "Alabama",
-		"Vaginal": "$9,013.88",
-		"C-section": "$12,593.60"
-  },
-	{
-		"State": "Alaska",
-		"Vaginal": "$19,775.79",
-		"C-section": "$28,491.95"
-  },
-	{
-		"State": "Arizona",
-		"Vaginal": "$12,930.96",
-		"C-section": "$18,299.01"
-  },
-	{
-		"State": "Arkansas",
-		"Vaginal": "$10,062.24",
-		"C-section": "$13,610.95"
-  },
-	{
-		"State": "California",
-		"Vaginal": "$13,081.32",
-		"C-section": "$19,001.81"
-  },
-	{
-		"State": "Colorado",
-		"Vaginal": "$12,549.70",
-		"C-section": "$16,574.70"
-  },
-	{
-		"State": "Connecticut",
-		"Vaginal": "$14,583.66",
-		"C-section": "$20,410.99"
-  },
-	{
-		"State": "Delaware",
-		"Vaginal": "$10,933.21",
-		"C-section": "$15,820.97"
-  },
-	{
-		"State": "Florida",
-		"Vaginal": "$13,923.95",
-		"C-section": "$18,864.02"
-  },
-	{
-		"State": "Georgia",
-		"Vaginal": "$12,447.83",
-		"C-section": "$16,602.23"
-  },
-	{
-		"State": "Hawaii",
-		"Vaginal": "$10,332.87",
-		"C-section": "$14,530.95"
-  },
-	{
-		"State": "Idaho",
-		"Vaginal": "$10,476.10",
-		"C-section": "$14,147.39"
-  },
-	{
-		"State": "Illinois",
-		"Vaginal": "$14,047.36",
-		"C-section": "$18,425.98"
-  },
-	{
-		"State": "Indiana",
-		"Vaginal": "$11,837.14",
-		"C-section": "$16,465.34"
-  },
-	{
-		"State": "Iowa",
-		"Vaginal": "$10,452.98",
-		"C-section": "$14,955.90"
-  },
-	{
-		"State": "Kansas",
-		"Vaginal": "$10,216.65",
-		"C-section": "$13,887.42"
-  },
-	{
-		"State": "Kentucky",
-		"Vaginal": "$10,485.97",
-		"C-section": "$15,055.99"
-  },
-	{
-		"State": "Louisiana",
-		"Vaginal": "$9,887.10",
-		"C-section": "$14,405.24"
-  },
-	{
-		"State": "Maine",
-		"Vaginal": "$10,685.24",
-		"C-section": "$14,641.75"
-  },
-	{
-		"State": "Maryland",
-		"Vaginal": "$11,820.32",
-		"C-section": "$16,973.33"
-  },
-	{
-		"State": "Massachusetts",
-		"Vaginal": "$14,618.17",
-		"C-section": "$18,088.29"
-  },
-	{
-		"State": "Michigan",
-		"Vaginal": "$10,957.85",
-		"C-section": "$14,651.73"
-  },
-	{
-		"State": "Minnesota",
-		"Vaginal": "$11,031.86",
-		"C-section": "$14,677.68"
-  },
-	{
-		"State": "Mississippi",
-		"Vaginal": "$10,430.48",
-		"C-section": "$13,820.24"
-  },
-	{
-		"State": "Missouri",
-		"Vaginal": "$10,906.82",
-		"C-section": "$14,590.62"
-  },
-	{
-		"State": "Montana",
-		"Vaginal": "$11,176.59",
-		"C-section": "$14,367.51"
-  },
-	{
-		"State": "Nebraska",
-		"Vaginal": "$9,611.30",
-		"C-section": "$13,602.12"
-  },
-	{
-		"State": "Nevada",
-		"Vaginal": "$13,135.05",
-		"C-section": "$16,970.82"
-  },
-	{
-		"State": "New Hampshire",
-		"Vaginal": "$11,487.32",
-		"C-section": "$19,525.80"
-  },
-	{
-		"State": "New Jersey",
-		"Vaginal": "$16,674.62",
-		"C-section": "$21,297.28"
-  },
-	{
-		"State": "New Mexico",
-		"Vaginal": "$11,033.96",
-		"C-section": "$15,406.29"
-  },
-	{
-		"State": "New York",
-		"Vaginal": "$15,518.68",
-		"C-section": "$20,706.77"
-  },
-	{
-		"State": "North Carolina",
-		"Vaginal": "$11,848.73",
-		"C-section": "$16,993.96"
-  },
-	{
-		"State": "North Dakota",
-		"Vaginal": "$13,191.93",
-		"C-section": "$16,711.12"
-  },
-	{
-		"State": "Ohio",
-		"Vaginal": "$10,609.60",
-		"C-section": "$14,508.64"
-  },
-	{
-		"State": "Oklahoma",
-		"Vaginal": "$11,287.31",
-		"C-section": "$14,518.31"
-  },
-	{
-		"State": "Oregon",
-		"Vaginal": "$12,231.67",
-		"C-section": "$15,231.75"
-  },
-	{
-		"State": "Pennsylvania",
-		"Vaginal": "$12,037.00",
-		"C-section": "$18,184.22"
-  },
-	{
-		"State": "Rhode Island",
-		"Vaginal": "$9,147.54",
-		"C-section": "$13,761.92"
-  },
-	{
-		"State": "South Carolina",
-		"Vaginal": "$11,377.81",
-		"C-section": "$16,439.41"
-  },
-	{
-		"State": "South Dakota",
-		"Vaginal": "$11,175.50",
-		"C-section": "$15,534.41"
-  },
-	{
-		"State": "Tennessee",
-		"Vaginal": "$12,602.76",
-		"C-section": "$17,198.69"
-  },
-	{
-		"State": "Texas",
-		"Vaginal": "$13,149.87",
-		"C-section": "$18,461.72"
-  },
-	{
-		"State": "Utah",
-		"Vaginal": "$9,919.41",
-		"C-section": "$13,225.10"
-  },
-	{
-		"State": "Vermont",
-		"Vaginal": "$12,074.59",
-		"C-section": "$15,103.24"
-  },
-	{
-		"State": "Virginia",
-		"Vaginal": "$12,065.79",
-		"C-section": "$17,452.53"
-  },
-	{
-		"State": "Washington",
-		"Vaginal": "$11,769.31",
-		"C-section": "$15,670.46"
-  },
-	{
-		"State": "West Virginia",
-		"Vaginal": "$10,301.50",
-		"C-section": "$13,893.06"
-  },
-	{
-		"State": "Wisconsin",
-		"Vaginal": "$15,798.92",
-		"C-section": "$21,703.62"
-  },
-	{
-		"State": "Wyoming",
-		"Vaginal": "$13,117.31",
-		"C-section": "$16,803.04"
+		"state": "Wyoming",
+		"vaginal_insured": "$6,099.28",
+		"vaginal_uninsured": "$13,117.31",
+		"c_insured": "$7,393.27",
+		"c_uninsured": "$16,803.04"
   }
-  ];
+];
