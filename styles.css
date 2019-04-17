@@ -67,15 +67,61 @@ p {
     padding-left: 3px;
 }
 
-.statefilter {
+/* .statefilter {
     max-width: 900px;
     margin: 0 auto;
     width: 100%;
     border-width: 1px;
     border-color: black;
     padding-left: 3px;
+}*/
+#state {
+    display: block;
+    width: 60%;
+    border-width: 1px;
+    border-color: black;
+    padding-left: 3px;
 }
 
+.total {
+    /* border: 1px solid #000; */
+    margin-top: 10px;
+    display: none;
+    width: 100%;
+}
+
+.total.active {
+    display: table;
+}
+
+.total td {
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+}
+
+.total td span {
+    width: 100%;
+    font-size: 1em;
+    display: block;
+}
+
+.total td span.number {
+    font-size: 1.3em;
+}
+
+/*
+.total {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    grid-gap: 10px;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: black;
+    max-width: 1000px;
+    margin: 0 auto;
+} */
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/

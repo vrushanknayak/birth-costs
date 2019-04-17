@@ -7,25 +7,49 @@ $(document).ready(function () {
 	});
 });
 
-$('#state').on("change", function (e) {
-	e.preventDefault();
+
+$('body').on("change", "#state, input", function (e) {
 	console.log("Change!");
-	const state_name = $("#state").val(),
-		result = _.find(data, { state: state_name }),
+
+
+	let state_name = $("#state").val(),
+		children = $("input").val();
+	console.log("number of kids is " + children);
+	if (state_name === "" || children === "") {
+		return false;
+	}
+
+	//convert kids to number
+	children = parseInt(children);
+
+	const result = _.find(data, { state: state_name }),
 		c_insured = parseFloat(result.c_insured.replace(/[^0-9.]+/g, "")),
 		c_uninsured = parseFloat(result.c_uninsured.replace(/[^0-9.]+/g, "")),
 		v_insured = parseFloat(result.vaginal_insured.replace(/[^0-9.]+/g, "")),
-		v_uninsured = parseFloat(result.vaginal_uninsured.replace(/[^0-9.]+/g, ""));
+		v_uninsured = parseFloat(result.vaginal_uninsured.replace(/[^0-9.]+/g, "")),
+		c_insured_total = c_insured * children,
+		c_uninsured_total = c_uninsured * children,
+		v_insured_total = v_insured * children,
+		v_uninsured_total = v_uninsured * children;
+	// console.log("The number changes to " + c_uninsured_total);
+	console.log(c_uninsured);
 
-	var csec = "C-Section insured cost"
-	var csec1 = "C-Section uninsured cost"
-	var vag = "Vaginal insured cost"
-	var vag1 = "Vaginal uninsured cost"
+	const csec = "C-Section insured",
+		csec1 = "C-Section uninsured",
+		vag = "Vaginal insured",
+		vag1 = "Vaginal uninsured";
 
-	$("#results").find("span").text(c_insured).append(csec)
-	$("#orla").find("span").text(c_uninsured).append(csec1)
-	$("#orla1").find("span").text(v_insured).append(vag)
-	$("#orla2").find("span").text(v_uninsured).append(vag1)
+	$("#c_insured").find("span.number").text("$" + c_insured_total.toLocaleString());
+	$("#c_uninsured").find("span.number").text("$" + c_uninsured_total.toLocaleString());
+	$("#v_insured").find("span.number").text("$" + v_insured_total.toLocaleString());
+	$("#v_uninsured").find("span.number").text("$" + v_uninsured_total.toLocaleString());
+
+	$("#c_insured").find("span.desc").text(csec);
+	$("#c_uninsured").find("span.desc").text(csec1);
+	$("#v_insured").find("span.desc").text(vag);
+	$("#v_uninsured").find("span.desc").text(vag1);
+
+	$(".total").addClass("active");
 
 
 	console.log(result);
