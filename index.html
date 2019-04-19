@@ -29,31 +29,55 @@
       <figure>
         <img src="img/baby.jpg" />
         <figcaption>
-          INSERT TEXT <span>(Credit: Alex Hockett, Unsplash)</span>
+          Birthing costs throughout the country are rising <span>(Credit: Alex Hockett, Unsplash)</span>
         </figcaption>
       </figure>
 
       <span class="byline"> By Orla McCaffrey and Vrushank Nayak</span>
-      <p>Despite <a href="https://gispub.epa.gov/air/trendsreport/2018/">reports</a> of decreasing air pollution levels in the United States, there is still widespread concern about how air quality may be affecting our
-        health. On Wednesday the World Health Organization released a report that connected air pollution to many health risks and even death. </p>
+      <p>The costs for many health care procedures in the U.S. are rising, including one of the most universal –– giving birth.
 
-      <p> The <a href="http://www.stateofglobalair.org/sites/default/files/soga_2019_report.pdf">report</a> estimates that air pollution caused 4.9 million deaths in 2017, about 8.7 percent of all deaths across the year. Effects of living in
-        polluted areas include higher chances of lung cancer, respiratory and heart illnesses. But scientists believe that even lower levels of air pollution can be dangerous.
-        The danger of fine particulate matter affects public health across the globe. While the World Health Organization guideline for healthy air is 10 mcg, in the United States the EPA annual standard is 12 mcg.</p>
 
-      <p>“The fact that the EPA sets those standards doesn’t mean that levels below those standards are necessarily safe,” said Dr. Marianthi-Anna Kiomourtzoglu, a professor at the Columbia Mailman School of Public Health.
+
+        The price tag on a new life jumped 49% for vaginal births and 41% for Caesarean sections from 2004 to 2010, according to a study from Truven Health Analystics.</p>
+
+
+
+      <p>No matter the procedure or insurance status, it costs the most to give birth in Alaska. It’s a reflection of the state’s lack of access to practitioners and remote setting, according to FAIR Health, a nonprofit that analyzes insurance bills
+        for procedures and patients across the U.S.</p>
+
+
+
+      <p>New Jersey and Wisconsin round out the top-3 most costly states in which to give birth.</p>
+
+
+
+      <p>It’s cheapest to give birth in Alabama, where the median cost of a vaginal birth for someone with insurance (the most common type of procedure) was $4,129.44 in 2017.</p>
+
+
+
+      <p>The median cost for vaginal and c-section deliveries in the U.S. in 2017 are:
+
+
+        <li>Vaginal delivery (insured): $5,296</li>
+        <li>Vaginal delivery (uninsured): $1,1628</li>
+        <li>C-section delivery (insured): $6,705</li>
+        <li>C-section delivery (uninsured): $15,746</li>
       </p>
-      <p> “We have more and more studies that show as air pollution levels decrease, at levels below the standard we still see highly harmful effects,” said Kiomourtzoglu.
-        But for Kiomourtzoglu and others in the field, higher air pollution will always be associated with higher risk.
-      </p>
 
 
-
-      <h2> Answer the two questions to find out the cost of birth in each state</h2>
+      <p>While the cost to give birth varies, many women report difficulty determining how much they’ll be charged for a the various parts of a hospital stay. For women with insurance, it’s cheaper to work with an in-network OBGYN. </p>
+      <p>The most comprehensive insurance plans cover 90% of the cost, meaning parents with good plans often have to pay hundreds or thousands of dollars. That cost doesn’t include a deductible, or the out-of-pocket amount that must be paid before
+        an insurer covers anything.</p>
+      <p>When Yen Ung, a registered nurse, gave birth to her son in 2018, the bill was much more than she’d expected –– $60,000 for her entire stay. </p>
+      <p>Part of the hefty price tag was the type of procedure, a c-section. And the
+        hospital’s use of an out-of-network pathologist meant her insurance wouldn’t cover those costs. She ended up paying $2,000-$3,000 more out-of-pocket than she’d expected. </p>
+      <p>“The added costs of the prenatal care made me mad and stressed out,”she
+        said.“I was already working full time at a demanding job already and had to figure out the insurance stuff because I was getting all these medical bills.” </p>
+      <h2> Find out how much it costs to give birth in your state</h2>
     </div>
 
     </div>
-    <div class="container">
+    <div id="box" class="container">
       <form>
         <select id="state">
           <option value="">Select your state</option>
@@ -100,12 +124,12 @@
         <input type="number" class="kids" value="1" max="20" /></input>
         <table class="total" id="results">
           <tr>
-            <td id="c_insured"><span class="number"></span> <span class="desc"></span></td>
-            <td id="c_uninsured"><span class="number"></span> <span class="desc"></span></td>
+            <td id="c_insured"><span class="number"></span> <span id="one" class="desc"></span></td>
+            <td id="c_uninsured"><span class="number"></span> <span id="two" class="desc"></span></td>
           </tr>
           <tr>
-            <td id="v_insured"><span class="number"></span> <span class="desc"></span></td>
-            <td id="v_uninsured"><span class="number"></span> <span class="desc"></span></td>
+            <td id="v_insured"><span class="number"></span> <span id="one" class="desc"></span></td>
+            <td id="v_uninsured"><span class="number"></span> <span id="two" class="desc"></span></td>
           </tr>
         </table>
     </div>
@@ -121,6 +145,25 @@
     <script src="main.js"></script>
 
     <script src="data.js"></script>
+
+    <div class="container">
+      <span id="space" class="byline"> Methodology</span></p>
+
+      <p>This data was provided by FAIR Health, a nonprofit that analyzes insurance bills for procedures and patients across the U.S.</p>
+
+
+
+      <p>It represents the median cost of vaginal and c-section births in the 50 U.S. states in 2017. It does not include other fees that accompany giving birth including prenatal care or complications arising from delivery.</p>
+
+
+
+      <p>We calculated the median costs for insured and uninsured procedures by using the median “charge” and “allowed” amounts for each state. The “charge” amount is the total cost for the procedure — what someone without
+        insurance
+        is responsible for
+        paying. </p>
+      <p>The “allowed” amount is the typical amount covered by insurers in that state. To find the procedure costs for people with insurance, we found the difference between charge and allowed amounts.
+      </p>
+    </div>
   </body>
 
 </html>
