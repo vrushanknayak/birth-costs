@@ -130,13 +130,14 @@ li {
 
 #box {
     width: 100%;
-    border: 2.75px solid black;
-    padding: 50px;
+    border: 1px solid black;
+    padding: 20px;
     margin: 0 auto;
+    background-color: #FFE2DF;
 }
 
 #space {
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 h2 {
